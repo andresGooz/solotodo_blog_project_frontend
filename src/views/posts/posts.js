@@ -9,7 +9,7 @@ function Posts() {
   const listRef = useRef(null);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/posts/')
+    fetch(DJANGO_BACKEND_API_DOMAIN_URL+'/api/posts/')
       .then(response => response.json())
       .then(data => setPosts(data))
       .catch(error => {

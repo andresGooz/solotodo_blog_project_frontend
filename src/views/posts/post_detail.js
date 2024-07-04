@@ -16,7 +16,7 @@ function PostDetail() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:8000/api/posts/${id}/`)
+    fetch(DJANGO_BACKEND_API_DOMAIN_URL+`/api/posts/${id}/`)
       .then(response => {
         if (!response.ok) {
           navigate(`/NotFound`);
