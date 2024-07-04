@@ -1,74 +1,17 @@
-# Getting Started with Create React App
+Prueba ingreso desarrollador Full-Stack SoloTodo
+Introducción
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+El siguiente ejercicio espera probar las capacidades de los postulantes al cargo de desarrollador full stack en las tecnologías usadas dentro de SoloTodo.
 
-## Available Scripts
+El contenido del ejercicio mismo no tiene ninguna relación con las actividades comerciales de SoloTodo, y sus respuestas sólo se van a ocupar para evaluar las capacidades de las herramientas utilizadas. En particular no se va a ocupar el contenido de ninguna de las respuestas recibidas dentro de la plataforma de SoloTodo.
 
-In the project directory, you can run:
+El ejercicio mismo consiste en la implementación de una API usando Python y Django, y en el consumo de dicha API por una aplicación implementada en React.
 
-### `npm start`
+El resultado del ejercicio se puede enviar como dos links a repositorios de GitHub vía el chat de Get On Board o bien como links a dos archivos comprimidos que contengan cada una de las aplicaciones.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+El ejercicio no tiene un límite de tiempo o fecha de entrega, pero la postulación quedará cerrada cuando se encuentre un candidato óptimo para el cargo.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
+Cada proyecto va a tener partes opcionales por incorporar ciertas tecnologías o herramientas que le van a dar puntos extra a la solución entregada.
 
 Parte 2: Implementación del cliente de la API
 La segunda parte del ejercicio es implementar una aplicación de frontend usando React que consuma la API definida anteriormente, proporcionando una interfaz para que un usuario pueda crear o ver publicaciones del blog.
@@ -77,7 +20,7 @@ Configuración
 Crear un nuevo proyecto de React. Para esto pueden ocupar Vite, Next.JS, o la herramienta que prefieran
 En el caso de que la herramienta que utilicen no incluya una solución para implementar rutas, configurar React-Router para disponer de ellas.
 Rutas
-Configurar las siguientes rutas:
+Configurar las siguientes rutas: React-Router
 /: Redireccionar a /posts
 /posts: Listar los títulos de los posts, donde cada uno es un link a su vista de detalles.
 /posts/:id: Mostrar todos los detalles del post con el ID dado. Si el ID no existe retornar un error 404 o una página que indique que el post no existe.
