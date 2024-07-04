@@ -4,6 +4,8 @@ import '@material/web/textfield/outlined-text-field';
 import '@material/web/button/filled-button';
 import '@material/web/icon/icon';
 import 'material-icons/iconfont/material-icons.css';
+import env from "react-dotenv";
+
 
 function CreatePost() {
   const [title, setTitle] = useState('');
@@ -35,8 +37,8 @@ function CreatePost() {
       content: content,
       author: author
     };
-    const username = 'admin';
-    const password = '12345';
+    const username = env.DJANGO_BACKEND_API_USERNAME;
+    const password = env.DJANGO_BACKEND_API_PASSWORD;
     const basicAuth = 'Basic ' + btoa(`${username}:${password}`);
     try {
       const response = await fetch('http://localhost:8000/api/posts/', {
