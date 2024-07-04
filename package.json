@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material/data-table": "^14.0.0",
+    "@material/list": "^14.0.0",
     "@material/theme": "^14.0.0",
     "@material/web": "^1.5.1",
     "@testing-library/jest-dom": "^5.17.0",

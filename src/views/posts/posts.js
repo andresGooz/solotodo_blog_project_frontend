@@ -1,8 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import {MDCList} from '@material/list';
+import '@material/list/dist/mdc.list.css';
+
 
 function Posts() {
   const [posts, setPosts] = useState([]);
+  const listRef = useRef(null);
 
   useEffect(() => {
     fetch('http://localhost:8000/api/posts/')
@@ -13,14 +17,22 @@ function Posts() {
       });
   }, []);
 
+  useEffect(() => {
+    if (listRef.current) {
+      new MDCList(listRef.current);
+    }
+  }, [posts]);
+
   return (
     <div>
       <h2>Posts</h2>
-      <ul>
+      <ul class="mdc-list" ref={listRef}>
         {posts.map(post => (
-          <li key={post.id}>
-            <Link to={`/post/${post.id}`}>{post.title}</Link>
-          </li>
+                <li key={post.id} class="mdc-list-item" tabindex="0">
+                  <Link to={`/post/${post.id}`}>
+                  <span class="mdc-list-item__text">{post.title}</span>
+                  </Link>
+                </li>
         ))}
       </ul>
     </div>
