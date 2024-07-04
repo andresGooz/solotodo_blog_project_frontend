@@ -42,6 +42,7 @@ function CreatePost() {
     const basicAuth = 'Basic ' + btoa(`${username}:${password}`);
     try {
       const response = await fetch(env.DJANGO_BACKEND_API_DOMAIN_URL+'/api/posts/', {
+        
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
