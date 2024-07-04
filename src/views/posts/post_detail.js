@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { MDCDataTable } from '@material/data-table';
 import '@material/data-table/dist/mdc.data-table.css';
 import '@material/theme/dist/mdc.theme.css';
+import env from "react-dotenv";
 
 
 function PostDetail() {
@@ -16,7 +17,7 @@ function PostDetail() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(DJANGO_BACKEND_API_DOMAIN_URL+`/api/posts/${id}/`)
+    fetch(env.DJANGO_BACKEND_API_DOMAIN_URL+`/api/posts/${id}/`)
       .then(response => {
         if (!response.ok) {
           navigate(`/NotFound`);

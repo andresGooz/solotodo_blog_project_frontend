@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {MDCList} from '@material/list';
 import '@material/list/dist/mdc.list.css';
+import env from "react-dotenv";
 
 
 function Posts() {
@@ -9,7 +10,7 @@ function Posts() {
   const listRef = useRef(null);
 
   useEffect(() => {
-    fetch(DJANGO_BACKEND_API_DOMAIN_URL+'/api/posts/')
+    fetch(env.DJANGO_BACKEND_API_DOMAIN_URL+'/api/posts/')
       .then(response => response.json())
       .then(data => setPosts(data))
       .catch(error => {
